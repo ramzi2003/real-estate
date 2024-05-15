@@ -14,7 +14,7 @@ const Layout = (props: Props) => {
     <>
       <Navbar />
       <div
-        className="mt-[76px] md:mt-[84px]"
+        className="mt-[76px] md:mt-[80px]"
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundRepeat: "no-repeat",

@@ -30,8 +30,7 @@ const Homepage = () => {
         // setPrevious(res.data.previous);
         // setNext(res.data.next);
       } catch (error) {
-        console.log('Failed to fetch data', error);
-       
+        console.log("Failed to fetch data", error);
       }
     };
 
@@ -97,35 +96,8 @@ const Homepage = () => {
         <meta name="description" content="Real Estate Home Page" />
       </Helmet>
 
-      <h1 className="text-3xl text-center pt-6 text-teal-600">
-        Latest Listings
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 px-8">
-        {latestListings.map((listing: ListingsInterface, index) => {
-          return (
-            <Card
-              key={index}
-              title={listing.title}
-              address={listing.address}
-              city={listing.city}
-              state={listing.state}
-              price={listing.price}
-              sale_type={listing.sale_type}
-              home_type={listing.home_type}
-              bedrooms={listing.bedrooms}
-              bathrooms={listing.bathrooms}
-              sqft={listing.sqft}
-              photo_main={listing.photo_main}
-              slug={listing.slug}
-            />
-          );
-        })}
-      </div>
-
-      <h2 className="text-3xl text-center py-4 text-teal-600">
-        Search Listings
-      </h2>
-      <div className="bg-gray-200 px-8 py-12 lg:px-12 space-y-6">
+    
+      <div className="bg-slate-700 px-8 py-12 lg:px-12 space-y-6">
         <SearchListingsForm
           setSearchListings={setSearchListings}
           setCount={setCount}
@@ -169,6 +141,27 @@ const Homepage = () => {
           />
         </div>
       )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 px-8">
+        {latestListings.map((listing: ListingsInterface, index) => {
+          return (
+            <Card
+              key={index}
+              title={listing.title}
+              address={listing.address}
+              city={listing.city}
+              state={listing.state}
+              price={listing.price}
+              sale_type={listing.sale_type}
+              home_type={listing.home_type}
+              bedrooms={listing.bedrooms}
+              bathrooms={listing.bathrooms}
+              sqft={listing.sqft}
+              photo_main={listing.photo_main}
+              slug={listing.slug}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };

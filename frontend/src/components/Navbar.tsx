@@ -14,21 +14,19 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex fixed top-0 left-0 right-0 justify-between items-center bg-teal-600 px-4 py-5 z-10">
-        <div>
-          <Link to="/" className="text-3xl font-semibold text-white">
+      <nav className="flex fixed top-0 left-0 right-0 justify-between items-center bg-slate-900 px-4 py-5 z-10">
+        <div className="text-3xl font-semibold text-white cursor-default">
             Real Estate
-          </Link>
         </div>
         <div
           className={
-            "hidden md:flex items-center justify-between space-x-6 text-white text-lg"
+            "hidden md:flex items-center justify-between space-x-6 text-white text-md"
           }
         >
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? " text-black underline" : ""
+              isActive ? " bg-slate-950 px-4 py-1 rounded-md" : "px-4 py-1 rounded-md hover:bg-slate-700"
             }
           >
             Home
@@ -36,7 +34,7 @@ const Navbar = () => {
           <NavLink
             to="/listings"
             className={({ isActive }) =>
-              isActive ? " text-black underline" : ""
+              isActive ? " bg-slate-950 px-4 py-1 rounded-md" : "px-4 py-1 rounded-md hover:bg-slate-700"
             }
           >
             Listings
@@ -44,7 +42,7 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? " text-black underline" : ""
+              isActive ? " bg-slate-950 px-4 py-1 rounded-md" : "px-4 py-1 rounded-md hover:bg-slate-700"
             }
           >
             About
@@ -53,7 +51,7 @@ const Navbar = () => {
           {localStorage.getItem("token") ? (
             <NavLink
               to="/login"
-              className="hover:bg-red-500 py-2 px-4 bg-purple-500"
+              className="hover:bg-blue-400 py-2 px-4 bg-blue-500 rounded-md"
               onClick={() => {
                 dispatch(logout());
                 dispatch(
@@ -70,13 +68,13 @@ const Navbar = () => {
             <>
               <NavLink
                 to="/login"
-                className="hover:bg-blue-600 py-2 px-4 bg-blue-500"
+                className="hover:bg-blue-400 py-2 px-4 bg-blue-500 rounded-md"
               >
                 Log In
               </NavLink>
               <NavLink
                 to="/signup"
-                className="hover:bg-emerald-600 py-2 px-4 bg-emerald-500"
+                className="hover:bg-blue-400 py-2 px-4 bg-blue-500 rounded-md"
               >
                 Sign Up
               </NavLink>
@@ -84,35 +82,35 @@ const Navbar = () => {
           )}
         </div>
         <div
-          className="md:hidden flex flex-col space-y-1 block z-20 p-2 hover:bg-gray-300 rounded-md cursor-pointer"
+          className="md:hidden flex flex-col space-y-1 block z-20 p-2 hover:bg-slate-700 rounded-md cursor-pointer"
           id="hamburgerBtn"
           onClick={displayHambugerItems}
         >
-          <div className="w-6 h-0.5 bg-black rounded-sm"></div>
-          <div className="w-6 h-0.5 bg-black rounded-sm"></div>
-          <div className="w-6 h-0.5 bg-black rounded-sm"></div>
+          <div className="w-6 h-0.5 bg-white rounded-sm"></div>
+          <div className="w-6 h-0.5 bg-white rounded-sm"></div>
+          <div className="w-6 h-0.5 bg-white rounded-sm"></div>
         </div>
 
         <div
           className={
             open
               ? "hidden"
-              : "block absolute top-0 left-0 -z-1 p-10 space-y-6 text-center w-full bg-teal-500 flex flex-col text-white text-lg rounded-b-xl md:hidden"
+              : "block absolute top-0 left-0 -z-1 p-10 space-y-6 text-center w-full bg-slate-900 flex flex-col text-white text-lg rounded-b-xl md:hidden"
           }
         >
-          <a href="/" className="text-lg hover:text-black">
+          <a href="/" className="text-lg hover:bg-slate-700">
             Home
           </a>
-          <a href="/listings" className="text-lg hover:text-black">
+          <a href="/listings" className="text-lg hover:bg-slate-700">
             Listings
           </a>
-          <a href="/about" className="text-lg hover:text-black">
+          <a href="/about" className="text-lg hover:bg-slate-700">
             About
           </a>
           {localStorage.getItem("token") ? (
             <a
               href="/login"
-              className="text-lg hover:text-black"
+              className="text-lg hover:bg-slate-700"
               onClick={() => {
                 dispatch(logout());
                 dispatch(
@@ -127,10 +125,10 @@ const Navbar = () => {
             </a>
           ) : (
             <>
-              <a href="/login" className="text-lg hover:text-black">
+              <a href="/login" className="text-lg hover:bg-slate-700">
                 Log In
               </a>
-              <a href="/signup" className="text-lg hover:text-black">
+              <a href="/signup" className="text-lg hover:bg-slate-700">
                 Sign Up
               </a>
             </>
