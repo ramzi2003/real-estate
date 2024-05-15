@@ -41,7 +41,7 @@ const Login = () => {
       </Helmet>
 
       <div className="w-full flex flex-col justify-center items-center p-8">
-        <h1 className="text-3xl font-semibold text-blue-500">Log In</h1>
+        <h1 className="text-3xl font-semibold text-slate-900">Log In</h1>
 
         <form
           action=""
@@ -77,7 +77,7 @@ const Login = () => {
             </p>
           </div>
 
-          <button className="mt-3 py-2 px-4 bg-blue-400 hover:bg-blue-500">
+          <button className="mt-3 py-2 px-4 bg-blue-400 rounded-md hover:bg-blue-300">
             Log In
           </button>
         </form>

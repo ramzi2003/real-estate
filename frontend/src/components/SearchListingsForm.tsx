@@ -48,8 +48,6 @@ const SearchListingsForm = ({
       ...formData,
       [e.target.name]:
         e.target.type === "checkbox" ? e.target.checked : e.target.value,
-      // if it is checkbox, then true or false will be set in formData
-      // otherwise value will be set
     });
   };
 
@@ -97,7 +95,7 @@ const SearchListingsForm = ({
       <form onSubmit={onSubmit}>
         <div className="grid grid-rows-4 grid-flow-col gap-3 md:grid-rows-3 md:gap-5 lg:grid-rows-2 lg:gap-6">
           <div>
-            <p className="text-blue-500 font-semibold">Sale or Rent</p>
+            <p className="text-white font-semibold">Sale or Rent</p>
             <select
               name="sale_type"
               onChange={(e) => onChange(e)}
@@ -110,7 +108,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Sqft</p>
+            <p className="text-white font-semibold">Sqft</p>
             <select
               name="sqft"
               onChange={(e) => onChange(e)}
@@ -126,7 +124,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Minimum Price</p>
+            <p className="text-white font-semibold">Minimum Price</p>
             <select
               name="price"
               onChange={(e) => onChange(e)}
@@ -147,7 +145,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Days Listed</p>
+            <p className="text-white font-semibold">Days Listed</p>
             <select
               name="days_listed"
               onChange={(e) => onChange(e)}
@@ -164,7 +162,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Bedrooms</p>
+            <p className="text-white font-semibold">Bedrooms</p>
             <select
               name="bedrooms"
               onChange={(e) => onChange(e)}
@@ -182,7 +180,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Has Photos</p>
+            <p className="text-white font-semibold">Has Photos</p>
             <select
               name="has_photos"
               onChange={(e) => onChange(e)}
@@ -198,7 +196,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Home Type</p>
+            <p className="text-white font-semibold">Home Type</p>
             <select
               name="home_type"
               onChange={(e) => onChange(e)}
@@ -212,7 +210,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Keywords</p>
+            <p className="text-white font-semibold">Keywords</p>
             <input
               type="text"
               name="keywords"
@@ -224,7 +222,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <p className="text-blue-500 font-semibold">Baths</p>
+            <p className="text-white font-semibold">Baths</p>
             <select
               name="bathrooms"
               onChange={(e) => onChange(e)}
@@ -240,7 +238,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <label className="text-blue-500 font-semibold">Open Houses</label>
+            <label className="text-white font-semibold">Open Houses</label>
             <input
               type="checkbox"
               name="open_house"
@@ -251,7 +249,7 @@ const SearchListingsForm = ({
           </div>
 
           <div>
-            <button className="bg-blue-400 hover:bg-blue-600 py-3 px-8 text-lg rounded-md">
+            <button className="bg-transparent border border-white text-white  hover:bg-gray-400 py-3 px-8 text-lg rounded-md">
               Search
             </button>
           </div>

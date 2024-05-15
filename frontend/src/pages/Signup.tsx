@@ -48,14 +48,14 @@ const Signup = () => {
       </Helmet>
 
       <div className="w-full flex flex-col justify-center items-center p-8">
-        <h1 className="text-3xl font-semibold text-emerald-500">Sign Up</h1>
+        <h1 className="text-3xl font-semibold text-slate-900">Sign Up</h1>
 
         <form
           action=""
           className="w-full md:w-1/2 p-3"
           onSubmit={handleOnSubmit}
         >
-          <div className="mt-4">
+          <div className="mt-4 text-white">
             <p>First Name*</p>
             <p>
               <input
@@ -69,7 +69,7 @@ const Signup = () => {
               />
             </p>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 text-white">
             <p>Last Name*</p>
             <p>
               <input
@@ -83,11 +83,11 @@ const Signup = () => {
               />
             </p>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 text-white">
             <p>Email*</p>
             <p>
               <input
-                type="email"
+                type="email text-white"
                 placeholder="johndoe@gmail.com"
                 name="email"
                 required
@@ -97,7 +97,7 @@ const Signup = () => {
               />
             </p>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 text-white">
             <p>Password*</p>
             <p>
               <input
@@ -111,7 +111,7 @@ const Signup = () => {
               />
             </p>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 text-white">
             <p>Confirm Password*</p>
             <p>
               <input
@@ -125,7 +125,7 @@ const Signup = () => {
               />
             </p>
           </div>
-          <button className="mt-3 py-2 px-4 bg-emerald-400 hover:bg-emerald-500">
+          <button className="mt-3 py-2 px-4 bg-blue-400 hover:bg-blue-300 rounded-md">
             Register
           </button>
         </form>

@@ -19,7 +19,6 @@ const Homepage = () => {
   console.log(searchFormData);
   console.log(searchlistings);
 
-  // Display latest listings
   useEffect(() => {
     const fetchListings = async () => {
       try {
@@ -132,7 +131,7 @@ const Homepage = () => {
       {searchlistings.length !== 0 && (
         <div className="px-8 pb-8 flex justify-center">
           <Pagination
-            itemsPerPage={3} // In backend, we have set Pagination to display 3 items per page
+            itemsPerPage={3} 
             count={count}
             previous_page={previous_page}
             next_page={next_page}

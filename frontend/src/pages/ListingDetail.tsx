@@ -107,7 +107,7 @@ const ListingDetail = () => {
         <meta name="description" content="Real Estate Listing Details Page" />
       </Helmet>
 
-      <div className="bg-blue-100 text-center py-5 space-y-3">
+      <div className="bg-slate-700 text-white text-center py-5 space-y-3">
         <h1 className="text-2xl md:text-4xl">{listingDetails.title}</h1>
         <p className="text-lg">
           {listingDetails.city}, {listingDetails.state},{" "}
@@ -137,16 +137,16 @@ const ListingDetail = () => {
           <div className="">
             <img src={realtor.photo} alt="realtor photo" className="w-full" />
             <div className="text-center">
-              <h3 className="text-3xl text-teal-700 pt-5">{realtor.name}</h3>
-              <p className="text-teal-600 pt-2">{realtor.phone}</p>
-              <p className="text-teal-600">{realtor.email}</p>
-              <p className="capitalize">{realtor.description}</p>
+              <h3 className="text-3xl text-slate-900 pt-5">{realtor.name}</h3>
+              <p className="text-white pt-2">{realtor.phone}</p>
+              <p className="text-white">{realtor.email}</p>
+              <p className="capitalize text-white">{realtor.description}</p>
             </div>
           </div>
         </div>
 
         {/* Listing Details */}
-        <div className="grid grid-cols-2 text-teal-700 font-medium">
+        <div className="grid grid-cols-2 text-white font-medium">
           <div>
             <ul>
               <li>Home Type: {listingDetails.home_type}</li>
@@ -167,7 +167,7 @@ const ListingDetail = () => {
           </div>
         </div>
 
-        <div className="font-medium">
+        <div className="font-medium text-white">
           <p>{listingDetails.description}</p>
         </div>
 
