@@ -22,7 +22,7 @@ class SignUpView(APIView):
                     'error': 'Password fields didnot match.'
                 })
             
-            attrs.pop('password2')  # After validation, remove password2 from serializers.validated_data
+            attrs.pop('password2') 
             
             return attrs
 

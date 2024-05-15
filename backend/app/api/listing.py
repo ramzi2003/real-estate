@@ -31,10 +31,6 @@ class ListingDetailView(RetrieveAPIView):
 class SearchListingsView(APIView, PageNumberPagination):
     permission_classes = (permissions.AllowAny, )
 
-    """
-        POST: Search using following filters
-        - sale_type, price, bedrooms, home_type, bathrooms, sqft, days_passed(days_listed), photos, open_house, keywords
-    """
     def post(self, request, format=None):
         data = self.request.data
 
